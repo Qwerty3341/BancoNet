@@ -32,7 +32,8 @@ namespace Banco
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            HomeWindow homeWindow = new HomeWindow();
+            homeWindow.Show();
         }
     }
 }

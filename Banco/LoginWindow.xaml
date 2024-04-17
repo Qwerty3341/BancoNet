@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="Iniciar Sesion - Banco" Height="450" Width="400" ResizeMode="NoResize" RenderOptions.EdgeMode="Unspecified">
     <Grid>
-        <!-- Your classic UI elements go here -->
         <Label Content="Banco de SA" FontSize="24" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top"/>
         <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="129,156,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="189,160,0,0" TextWrapping="Wrap" Text="Tu e-mail" VerticalAlignment="Top" Width="120"/>
