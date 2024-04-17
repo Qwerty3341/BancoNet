@@ -24,5 +24,15 @@ namespace Banco
         {
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged()
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

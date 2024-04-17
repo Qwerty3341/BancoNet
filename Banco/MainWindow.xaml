@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Banco"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Iniciar Sesion - Banco" Height="450" Width="400" ResizeMode="NoResize" RenderOptions.EdgeMode="Unspecified">
     <Grid>
-        
+        <!-- Your classic UI elements go here -->
+        <Label Content="Banco de SA" FontSize="24" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top"/>
+        <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="129,156,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="189,160,0,0" TextWrapping="Wrap" Text="Tu e-mail" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="103,217,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="189,221,0,0" TextWrapping="Wrap" Text="Tu contraseña" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Ingresar" HorizontalAlignment="Center" Margin="0,290,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+        <TextBlock Margin="0,345,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Hyperlink NavigateUri="http://google.com">Registrarse</Hyperlink>
+        </TextBlock>
     </Grid>
 </Window>
