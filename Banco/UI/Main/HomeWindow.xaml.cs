@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Banco.UI
+namespace Banco.UI.Main
 {
     /// <summary>
     /// Interaction logic for HomeWindow.xaml
