@@ -80,6 +80,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GestionBancoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionBancoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GestionLibreriaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -120,6 +125,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="GestionBancoDataSet.xsc">
+      <DependentUpon>GestionBancoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionBancoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionBancoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionBancoDataSet.xss">
+      <DependentUpon>GestionBancoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="GestionLibreriaDataSet.xsc">
       <DependentUpon>GestionLibreriaDataSet.xsd</DependentUpon>
     </None>

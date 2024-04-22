@@ -33,5 +33,16 @@ namespace Banco.Properties {
                 return ((string)(this["GestionLibreriaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-TQILKSUM\\VSGESTION;Initial Catalog=GestionBanco;Integrated Sec" +
+            "urity=True;TrustServerCertificate=True")]
+        public string GestionBancoConnectionString {
+            get {
+                return ((string)(this["GestionBancoConnectionString"]));
+            }
+        }
     }
 }
