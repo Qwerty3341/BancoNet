@@ -1,5 +1,7 @@
 ﻿using System.Windows;
 using Banco.UI.Main;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace Banco.UI
 {
@@ -11,6 +13,24 @@ namespace Banco.UI
         public MainWindow()
         {
             InitializeComponent();
+            ConectarALaBase();
+        }
+
+        private void ConectarALaBase()
+        {
+            string conectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString"].ConnectionString; //[nombreProyecto,.Properties.Settings.cadenaGuardada]
+            using (SqlConnection conexion = new SqlConnection(conectionString))
+            {
+                try
+                {
+                    conexion.Open();
+                    MessageBox.Show("Base de datos conectada");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Conexion fallida");
+                }
+            }
         }
 
         private void TextBox_TextChanged()
