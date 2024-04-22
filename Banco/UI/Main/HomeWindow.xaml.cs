@@ -39,6 +39,12 @@ namespace Banco.UI.Main
 
                             break;
                         }
+                        else
+                        {
+                            EmptyPanel empty = new EmptyPanel();
+                            Grid.SetColumn(empty, 1);
+                            contentGrid.Children.Add(empty);
+                        }
                     }
                 }
             }

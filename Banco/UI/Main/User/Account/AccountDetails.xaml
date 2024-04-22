@@ -45,7 +45,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Border Grid.Column="0" Background="Transparent">
-                        <Image Source="/UI/Main/User/Account/bank-check.png" RenderTransformOrigin="0.5,0.5">
+                        <Image x:Name="accountTypeIcon" Source="/UI/Main/User/Account/bank-check.png" RenderTransformOrigin="0.5,0.5">
                             <Image.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform ScaleX="0.7" ScaleY="0.7"/>
@@ -57,7 +57,7 @@
                         </Image>
                     </Border>
                     <Border Grid.Column="1" Background="Transparent" Padding="0,0,0,0">
-                        <Label Content="TIPOCUENTA" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,0" FontWeight="Bold"/>
+                        <Label x:Name="accountType" Content="TIPOCUENTA" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,0" FontWeight="Bold"/>
                     </Border>
 
 
@@ -75,7 +75,7 @@
                 </Grid.RowDefinitions>
 
                 <Border Grid.Row="0" Background="Transparent">
-                    <Label Content="SALDOCUENTA" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16"/>
+                    <Label x:Name="accountBalance" Content="SALDOCUENTA" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16"/>
                 </Border>
                 <Border Grid.Row="1" Background="Transparent">
                     <Label Content="SALDO" HorizontalAlignment="Right"/>
