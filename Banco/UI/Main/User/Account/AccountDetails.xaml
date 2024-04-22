@@ -24,17 +24,17 @@
         </Grid.ColumnDefinitions>
 
         <!-- FIRST COLUMN CONTENT -->
-        <Border Grid.Column="0" Background="Transparent">
+        <Border Grid.Column="0" Background="White">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*"/>
                     <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
 
-                <Border Grid.Row="0" Background="Transparent"/>
+                <Border Grid.Row="0" Background="White"/>
 
 
-                <Border Grid.Row="1" Background="Transparent">
+                <Border Grid.Row="1" Background="White">
                     <Label Content="NUMEROCUENTA" VerticalAlignment="Center" HorizontalAlignment="Left" FontStyle="Italic"/>
                 </Border>
 
@@ -44,7 +44,7 @@
                         <ColumnDefinition Width ="4*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Border Grid.Column="0" Background="Transparent">
+                    <Border Grid.Column="0" Background="White">
                         <Image x:Name="accountTypeIcon" Source="/UI/Main/User/Account/bank-check.png" RenderTransformOrigin="0.5,0.5">
                             <Image.RenderTransform>
                                 <TransformGroup>
@@ -56,7 +56,7 @@
                             </Image.RenderTransform>
                         </Image>
                     </Border>
-                    <Border Grid.Column="1" Background="Transparent" Padding="0,0,0,0">
+                    <Border Grid.Column="1" Background="White" Padding="0,0,0,0">
                         <Label x:Name="accountType" Content="TIPOCUENTA" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,0" FontWeight="Bold"/>
                     </Border>
 
@@ -66,7 +66,7 @@
         </Border>
 
         <!-- SECOND COLUMN CONTENT -->
-        <Border Grid.Column="1" Background="Transparent">
+        <Border Grid.Column="1" Background="White">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="3*"/>
@@ -74,10 +74,10 @@
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
 
-                <Border Grid.Row="0" Background="Transparent">
+                <Border Grid.Row="0" Background="White">
                     <Label x:Name="accountBalance" Content="SALDOCUENTA" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16"/>
                 </Border>
-                <Border Grid.Row="1" Background="Transparent">
+                <Border Grid.Row="1" Background="White">
                     <Label Content="SALDO" HorizontalAlignment="Right"/>
                 </Border>
 
