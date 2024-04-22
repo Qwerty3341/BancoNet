@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using Banco.UI.Main.User.Account;
+using Banco.UI.Main.User.Account;
 
 namespace Banco.UI.Main
 {
@@ -28,13 +30,20 @@ namespace Banco.UI.Main
                         TextBlock textBlock = (TextBlock)item;
                         if (textBlock.Text == "Cuentas")
                         {
-                            Console.WriteLine("Pablo");
+                            // Instancia el UserControl CuentasUserControl
+                            AccountList accList = new AccountList();
+
+                            // Agrega el UserControl al Grid en la segunda columna
+                            Grid.SetColumn(accList, 1);
+                            contentGrid.Children.Add(accList);
+
                             break;
                         }
                     }
                 }
             }
         }
+
 
 
     }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Banco"
         mc:Ignorable="d"
         Title="Banco - {nombre}" Height="450" Width="800">
-    <Grid>
+    <Grid  x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="39*"/>
             <ColumnDefinition Width="121*"/>
@@ -48,7 +48,9 @@
                 </StackPanel>
             </ListBoxItem>
         </ListBox>
-        <Label Grid.Column="1" FontSize="27" Content="Banco" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Label Grid.Column="1" FontSize="23" Content="Bienvenido" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid Grid.Column="1" x:Name="contentGrid">
+            <!-- Aquí agregaremos el UserControl -->
+
+        </Grid>
     </Grid>
 </Window>
