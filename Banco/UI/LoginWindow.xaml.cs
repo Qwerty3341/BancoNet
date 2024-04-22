@@ -18,7 +18,7 @@ namespace Banco.UI
 
         private void ConectarALaBase()
         {
-            string conectionString = ConfigurationManager.ConnectionStrings["Banco.properties.Settings.GestionLibreriaConnectionString"].ConnectionString; //[nombreProyecto,.Properties.Settings.cadenaGuardada]
+            string conectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionLibreriaConnectionString"].ConnectionString; //[nombreProyecto,.Properties.Settings.cadenaGuardada]
             using (SqlConnection conexion = new SqlConnection(conectionString))
             {
                 try
