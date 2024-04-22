@@ -13,11 +13,25 @@ namespace Banco.UI
         public MainWindow()
         {
             InitializeComponent();
-            string miConexion = ConfigurationManager.ConnectionStrings["Banco.properties.Settings.GestionLibreriaConnectionString"].ConnectionString; //[nombreProyecto,.Properties.Settings.cadenaGuardada]
-            miConexionSQL = new SqlConnection(miConexion);
+            ConectarALaBase();
         }
 
-        SqlConnection miConexionSQL;
+        private void ConectarALaBase()
+        {
+            string conectionString = ConfigurationManager.ConnectionStrings["Banco.properties.Settings.GestionLibreriaConnectionString"].ConnectionString; //[nombreProyecto,.Properties.Settings.cadenaGuardada]
+            using (SqlConnection conexion = new SqlConnection(conectionString))
+            {
+                try
+                {
+                    conexion.Open();
+                    MessageBox.Show("Base de datos conectada");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Conexion fallida");
+                }
+            }
+        }
 
         private void TextBox_TextChanged()
         {
