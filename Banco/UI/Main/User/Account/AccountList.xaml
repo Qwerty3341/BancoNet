@@ -7,7 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="411,197,0,0" VerticalAlignment="Top"/>
-
+        <ScrollViewer x:Name="AccountScrollablePanel">
+            <StackPanel x:Name="AccountStackPanel" Orientation="Vertical" Margin="0,0,0,0">
+            </StackPanel>
+        </ScrollViewer>
+        <!--AKI VAN LOS PANELES DE LAS CUENTAS-->
     </Grid>
 </UserControl>
