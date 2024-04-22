@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Banco.UI.Main.User.Account;
 using Banco.UI.Main.User.Account;
+using Banco.UI.Main.User.History;
 
 namespace Banco.UI.Main
 {
@@ -37,6 +38,16 @@ namespace Banco.UI.Main
                             Grid.SetColumn(accList, 1);
                             contentGrid.Children.Add(accList);
 
+                            break;
+                        }
+                        else if (textBlock.Text == "Movimientos")
+                        {
+                            // Instancia el UserControl CuentasUserControl
+                            HistoryContainer historyContainer = new HistoryContainer();
+
+                            // Agrega el UserControl al Grid en la segunda columna
+                            Grid.SetColumn(historyContainer, 1);
+                            contentGrid.Children.Add(historyContainer);
                             break;
                         }
                         else

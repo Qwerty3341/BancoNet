@@ -55,6 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UI\Main\User\History\HistoryChartContainer.xaml.cs">
+      <DependentUpon>HistoryChartContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\User\History\HistoryContainer.xaml.cs">
+      <DependentUpon>HistoryContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\User\History\HistoryDetail.xaml.cs">
+      <DependentUpon>HistoryDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\User\History\HistoryListContainer.xaml.cs">
+      <DependentUpon>HistoryListContainer.xaml</DependentUpon>
+    </Compile>
     <Page Include="UI\Main\EmptyPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +107,22 @@
       <DependentUpon>LoginWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UI\Main\User\History\HistoryChartContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Main\User\History\HistoryContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Main\User\History\HistoryDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Main\User\History\HistoryListContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
