@@ -12,9 +12,26 @@
             <RowDefinition Height="9*"/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer x:Name="HistoryList" Grid.Row="1">
-            <StackPanel x:Name="HistoryListStackPanel" Height="auto" Width="auto"/>
+        <ScrollViewer x:Name="HistoryList" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="HistoryListStackPanel" Height="auto" Width="auto" Margin="10"/>
         </ScrollViewer>
+        <Grid>
+            <TextBox  Width="250"  VerticalAlignment="Center" HorizontalAlignment="Right" x:Name="SearchTermTextBox" Margin="10" TextAlignment="Right"/>
+            <TextBlock IsHitTestVisible="False" Text="Buscar..." VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Foreground="DarkGray" Cursor="Wait">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </Grid>
+
+
 
 
     </Grid>

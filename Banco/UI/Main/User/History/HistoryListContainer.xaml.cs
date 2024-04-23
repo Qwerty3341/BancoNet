@@ -25,9 +25,14 @@ namespace Banco.UI.Main.User.History
         {
             InitializeComponent();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 2; i++)
             {
-                HistoryListStackPanel.Children.Add(new HistoryDetail());
+                HistoryDetail historyDetail = new HistoryDetail();
+                if (i > 0)
+                {
+                    historyDetail.Margin = new Thickness(0, 10, 0, 0); // Margen de 5 unidades arriba
+                }
+                HistoryListStackPanel.Children.Add(historyDetail);
             }
             
         }

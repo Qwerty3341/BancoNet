@@ -46,6 +46,7 @@ namespace Banco.UI
         {
             HomeWindow homeWindow = new HomeWindow();
             homeWindow.Show();
+            this.Close();
         }
     }
 }
