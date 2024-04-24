@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Banco.UI.Main.User.Transfer.TransferContactDetail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Banco.UI.Main.User.Transfer"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="600">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Ellipse Width="125" Height="125" Fill="LightGray"/>
+        <Ellipse Width="125" Height="125">
+            <Ellipse.Fill>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Image  Stretch="UniformToFill" Source="/UI/Main/User/Transfer/jovani-vazquez-7.png"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+               <RowDefinition Height="1*"/>
+               <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0"  Content="ALIASCONTACTO" FontSize="28" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom"></Label>
+            <Label Grid.Row="1"  Content="NOMBRECONTACTO" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="/UI/Main/User/Transfer/bank.png" Width="22" Height="22" HorizontalAlignment="Left"></Image>
+            <Label Grid.Column="1" Content="NOMBANCO" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10"></Label>
+        </Grid>
+
+        <Image Grid.Column="3" Source="/UI/Main/User/Transfer/rightarrow.png" Width="35" Height="35" ></Image>
+    </Grid>
+</UserControl>

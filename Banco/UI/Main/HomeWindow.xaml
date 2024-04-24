@@ -24,7 +24,7 @@
             </ListBoxItem>
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock>Transfesirir</TextBlock>
+                    <TextBlock>Transferir</TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem>

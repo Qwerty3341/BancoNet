@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using Banco.UI.Main.User.Account;
 using Banco.UI.Main.User.Account;
 using Banco.UI.Main.User.History;
+using Banco.UI.Main.User.Transfer;
 
 namespace Banco.UI.Main
 {
@@ -50,8 +51,17 @@ namespace Banco.UI.Main
                             contentGrid.Children.Add(historyContainer);
                             break;
                         }
-                        else
+                        else if (textBlock.Text == "Transferir")
                         {
+                            // Instancia el UserControl CuentasUserControl
+                            TransferContainer transferContainer = new TransferContainer();
+
+                            // Agrega el UserControl al Grid en la segunda columna
+                            Grid.SetColumn(transferContainer, 1);
+                            contentGrid.Children.Add(transferContainer);
+                        }
+                        else
+                            {
                             EmptyPanel empty = new EmptyPanel();
                             Grid.SetColumn(empty, 1);
                             contentGrid.Children.Add(empty);

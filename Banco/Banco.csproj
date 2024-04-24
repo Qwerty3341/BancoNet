@@ -68,6 +68,12 @@
     <Compile Include="UI\Main\User\History\HistoryListContainer.xaml.cs">
       <DependentUpon>HistoryListContainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Main\User\Transfer\TransferContactDetail.xaml.cs">
+      <DependentUpon>TransferContactDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\User\Transfer\TransferContainer.xaml.cs">
+      <DependentUpon>TransferContainer.xaml</DependentUpon>
+    </Compile>
     <Page Include="UI\Main\EmptyPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -134,6 +140,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UI\Main\User\Transfer\TransferContactDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Main\User\Transfer\TransferContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -188,6 +202,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="UI\Main\User\Account\bank-check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Main\User\Transfer\jovani-vazquez-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Main\User\Transfer\bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Main\User\Transfer\rightarrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
