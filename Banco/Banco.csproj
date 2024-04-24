@@ -61,6 +61,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GestionBancoDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UI\Main\Executive\ExecutiveHome.xaml.cs">
+      <DependentUpon>ExecutiveHome.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Main\User\History\HistoryChartContainer.xaml.cs">
       <DependentUpon>HistoryChartContainer.xaml</DependentUpon>
     </Compile>
@@ -87,6 +90,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UI\Main\Executive\ExecutiveHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\Main\User\Account\AccountDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,7 +102,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UI\Main\HomeWindow.xaml">
+    <Page Include="UI\Main\User\HomeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,7 +133,7 @@
     <Compile Include="UI\Main\User\Account\AccountList.xaml.cs">
       <DependentUpon>AccountList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\Main\HomeWindow.xaml.cs">
+    <Compile Include="UI\Main\User\HomeWindow.xaml.cs">
       <DependentUpon>HomeWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\LoginWindow.xaml.cs">

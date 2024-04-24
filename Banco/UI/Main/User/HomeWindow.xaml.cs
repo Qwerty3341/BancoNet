@@ -1,13 +1,11 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using Banco.UI.Main.User.Account;
 using Banco.UI.Main.User.Account;
 using Banco.UI.Main.User.History;
 using Banco.UI.Main.User.Transfer;
 using Banco.UI.Main.User.Withdraw;
 
-namespace Banco.UI.Main
+namespace Banco.UI.Main.User
 {
     /// <summary>
     /// Interaction logic for HomeWindow.xaml

@@ -34,7 +34,7 @@
                 <Border Grid.Row="0" Background="White"/>
 
 
-                <Border Grid.Row="1" Background="White">
+                <Border Grid.Row="1" Background="#7ca8b2">
                     <Label Content="NUMEROCUENTA" VerticalAlignment="Center" HorizontalAlignment="Left" FontStyle="Italic"/>
                 </Border>
 
