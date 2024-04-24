@@ -56,6 +56,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GestionBancoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionBancoDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UI\Main\User\History\HistoryChartContainer.xaml.cs">
       <DependentUpon>HistoryChartContainer.xaml</DependentUpon>
     </Compile>
@@ -184,6 +189,17 @@
     </None>
     <None Include="GestionBancoDataSet.xss">
       <DependentUpon>GestionBancoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionBancoDataSet1.xsc">
+      <DependentUpon>GestionBancoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GestionBancoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionBancoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionBancoDataSet1.xss">
+      <DependentUpon>GestionBancoDataSet1.xsd</DependentUpon>
     </None>
     <None Include="GestionLibreriaDataSet.xsc">
       <DependentUpon>GestionLibreriaDataSet.xsd</DependentUpon>
