@@ -12,7 +12,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="1" Background="Aquamarine">
+        <Grid Grid.Row="1" Background="#7ca8b2">  
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>

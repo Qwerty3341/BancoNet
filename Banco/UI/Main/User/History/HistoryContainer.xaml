@@ -12,8 +12,8 @@
             <ColumnDefinition  Width="3*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="0" Background="White"/>
-        <Border Grid.Column="1" Background="Blue"/>
+        <Border Grid.Column="0" Background="LightGray"/>
+        <Border Grid.Column="1" Background="white"/>
 
     </Grid>
 </UserControl>

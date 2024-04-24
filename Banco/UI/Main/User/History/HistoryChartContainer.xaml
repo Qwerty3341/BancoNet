@@ -14,8 +14,8 @@
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0" Background="White"/>
-        <Border Grid.Row="1" Background="Green"/>
-        <Border Grid.Row="2" Background="Yellow"/>
+        <Border Grid.Row="1" Background="#7ca8b2"/>
+        <Border Grid.Row="2" Background="#6a9ba7"/>
         <Label Grid.Row="0" Content="Gastos e ingresos" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontSize="16"/>
 
     </Grid>
