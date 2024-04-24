@@ -20,7 +20,7 @@ namespace Banco.UI
 
         private void ConectarALaBase()
         {
-            string conectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString1"].ConnectionString;
+            string conectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString"].ConnectionString;
 
             using (SqlConnection conexion = new SqlConnection(conectionString))
             {
