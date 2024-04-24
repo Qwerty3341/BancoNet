@@ -18,7 +18,7 @@ namespace Banco.UI
 
         private void ConectarALaBase()
         {
-            string conectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString"].ConnectionString; //[nombreProyecto,.Properties.Settings.cadenaGuardada]
+            string conectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString"].ConnectionString;
 
             using (SqlConnection conexion = new SqlConnection(conectionString))
             {
@@ -44,9 +44,13 @@ namespace Banco.UI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string nombreUsuario = txtUsername.Text;
             HomeWindow homeWindow = new HomeWindow();
             homeWindow.Show();
             this.Close();
         }
+
+
+
     }
 }
