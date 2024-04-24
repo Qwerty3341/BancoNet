@@ -3,6 +3,7 @@ using Banco.UI.Main;
 using System.Configuration;
 using System.Data.SqlClient;
 using System;
+using Banco.UI.Main.User;
 
 namespace Banco.UI
 {
