@@ -5,6 +5,7 @@ using System.Windows;
 
 namespace Banco.Utilidades
 {
+    //Clase usada para verificar que los usuarios existan
     internal class ValidadorDeUsuarios
     {
         public bool ValidarUsuario(string username, string password)
