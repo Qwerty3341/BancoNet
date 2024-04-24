@@ -82,6 +82,7 @@
     <Compile Include="UI\Main\User\Withdraw\WithdrawContainer.xaml.cs">
       <DependentUpon>WithdrawContainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="utilidades\ValidadorDeUsuarios.cs" />
     <Page Include="UI\Main\EmptyPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
