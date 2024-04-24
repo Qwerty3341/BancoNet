@@ -13,18 +13,17 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Ellipse Width="125" Height="125" Fill="LightGray"/>
-        <Ellipse Width="125" Height="125">
-            <Ellipse.Fill>
-                <VisualBrush>
-                    <VisualBrush.Visual>
-                        <Image  Stretch="UniformToFill" Source="/UI/Main/User/Transfer/jovani-vazquez-7.png"/>
-                    </VisualBrush.Visual>
-                </VisualBrush>
-            </Ellipse.Fill>
-        </Ellipse>
-        
-
+        <Border Grid.Column="0" Margin="10">
+            <Ellipse Width="125" Height="125" Stretch="UniformToFill">
+                <Ellipse.Fill>
+                    <VisualBrush>
+                        <VisualBrush.Visual>
+                            <Image  Stretch="UniformToFill" Source="/UI/Main/User/Transfer/jovani-vazquez-7.png"/>
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Border>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                <RowDefinition Height="1*"/>

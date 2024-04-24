@@ -74,6 +74,9 @@
     <Compile Include="UI\Main\User\Transfer\TransferContainer.xaml.cs">
       <DependentUpon>TransferContainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Main\User\Withdraw\WithdrawContainer.xaml.cs">
+      <DependentUpon>WithdrawContainer.xaml</DependentUpon>
+    </Compile>
     <Page Include="UI\Main\EmptyPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -145,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\Main\User\Transfer\TransferContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Main\User\Withdraw\WithdrawContainer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

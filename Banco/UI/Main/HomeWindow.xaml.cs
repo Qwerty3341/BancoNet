@@ -5,6 +5,7 @@ using Banco.UI.Main.User.Account;
 using Banco.UI.Main.User.Account;
 using Banco.UI.Main.User.History;
 using Banco.UI.Main.User.Transfer;
+using Banco.UI.Main.User.Withdraw;
 
 namespace Banco.UI.Main
 {
@@ -59,6 +60,15 @@ namespace Banco.UI.Main
                             // Agrega el UserControl al Grid en la segunda columna
                             Grid.SetColumn(transferContainer, 1);
                             contentGrid.Children.Add(transferContainer);
+                        }
+                        else if (textBlock.Text == "Retirar")
+                        {
+                            // Instancia el UserControl CuentasUserControl
+                            WithdrawContainer withdrawContainer = new WithdrawContainer();
+
+                            // Agrega el UserControl al Grid en la segunda columna
+                            Grid.SetColumn(withdrawContainer, 1);
+                            contentGrid.Children.Add(withdrawContainer);
                         }
                         else
                             {
