@@ -14,7 +14,7 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Border Grid.Column="0" Margin="10">
-            <Ellipse Width="125" Height="125" Stretch="UniformToFill">
+            <Ellipse Width="100" Height="100" Stretch="UniformToFill">
                 <Ellipse.Fill>
                     <VisualBrush>
                         <VisualBrush.Visual>
@@ -24,7 +24,7 @@
                 </Ellipse.Fill>
             </Ellipse>
         </Border>
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="1" Background="#A2C1C8">
             <Grid.RowDefinitions>
                <RowDefinition Height="1*"/>
                <RowDefinition Height="1*"/>
@@ -33,7 +33,7 @@
             <Label Grid.Row="1"  Content="NOMBRECONTACTO" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Grid>
 
-        <Grid Grid.Column="2">
+        <Grid Grid.Column="2" Background="#B4CCD3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="3*"/>
@@ -42,6 +42,9 @@
             <Label Grid.Column="1" Content="NOMBANCO" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10"></Label>
         </Grid>
 
-        <Image Grid.Column="3" Source="/UI/Main/User/Transfer/rightarrow.png" Width="35" Height="35" ></Image>
+        <Border Grid.Column="3" Background="#C7D9DE">
+            <Image Grid.Column="3" Source="/UI/Main/User/Transfer/rightarrow.png" Width="35" Height="35" ></Image>
+        </Border>
+       
     </Grid>
 </UserControl>

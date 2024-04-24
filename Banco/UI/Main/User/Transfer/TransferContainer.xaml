@@ -12,10 +12,10 @@
             <RowDefinition Height="4*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" Background="BlueViolet"/>
-        <Border Grid.Row="1" Background="YellowGreen"/>
+        <Border Grid.Row="0" Background="White"/>
+        <Border Grid.Row="1" Background="White"/>
 
-        <Border Grid.Row="2" Background="Orange"/>
+        <Border Grid.Row="2" Background="#8FB4BD"/>
 
         <Label Content="Transferir" FontWeight="Bold" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" ></Label>
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
@@ -26,8 +26,8 @@
 
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="AddNewContact" Content="Añadir nuevo..." Margin="5"/>
-            <Button x:Name="Other" Content="Otro..." Margin="5" IsDefault="True"/>
+            <Button x:Name="AddNewContact" Content="Añadir nuevo..." Margin="5" Width="90" Height="24"/>
+            <Button x:Name="Other" Content="Otro..." Margin="5" IsDefault="True" Width="50"/>
         </StackPanel>
 
     </Grid>
