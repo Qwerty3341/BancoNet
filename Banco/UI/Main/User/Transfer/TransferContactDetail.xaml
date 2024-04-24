@@ -34,12 +34,12 @@
         </Grid>
 
         <Grid Grid.Column="2" Background="#B4CCD3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Source="/UI/Main/User/Transfer/bank.png" Width="22" Height="22" HorizontalAlignment="Left"></Image>
-            <Label Grid.Column="1" Content="NOMBANCO" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10"></Label>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="/UI/Main/User/Transfer/bank.png" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="1" Content="NOMBANCO" HorizontalAlignment="Center" FontSize="10"/>
         </Grid>
 
         <Border Grid.Column="3" Background="#C7D9DE">
