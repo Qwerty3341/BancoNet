@@ -19,7 +19,7 @@ namespace Banco.UI
 
         private void ConectarALaBase()
         {
-            string conectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString"].ConnectionString;
+            string conectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString1"].ConnectionString;
 
             using (SqlConnection conexion = new SqlConnection(conectionString))
             {
@@ -33,7 +33,7 @@ namespace Banco.UI
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Conexion fallida");
+                    MessageBox.Show("Conexion fallida " + ex.Message);
                 }
             }
         }
@@ -52,62 +52,62 @@ namespace Banco.UI
                 this.Close();
         }
 
-            /*
-            private void Button_Click(object sender, RoutedEventArgs e)
-            {
+            
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
 
-                 //Aqui se validara que el usuario exista
+        //        //Aqui se validara que el usuario exista
 
-                string nombreUsuario = txtUsername.Text;
-                string contrasenia = txtPassword.Password;
+        //    string nombreUsuario = txtUsername.Text;
+        //    string contrasenia = txtPassword.Password;
 
-                if (ValidarUsuario(nombreUsuario, contrasenia))
-                {
-                    HomeWindow homeWindow = new HomeWindow();
-                    homeWindow.Show();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Nombre o contraseña incorrectos");
-                }
+        //    if (ValidarUsuario(nombreUsuario, contrasenia))
+        //    {
+        //        HomeWindow homeWindow = new HomeWindow();
+        //        homeWindow.Show();
+        //        this.Close();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Nombre o contraseña incorrectos");
+        //    }
 
-            }
+        //}
 
-            private bool ValidarUsuario(string username, string password)
-            {
-                return ValidarUsuarioCliente(username, password) || ValidarUsuarioEjecutivo(username, password) ;
-            }
+        //private bool ValidarUsuario(string username, string password)
+        //{
+        //    return ValidarUsuarioCliente(username, password) || ValidarUsuarioEjecutivo(username, password) ;
+        //}
 
-            private bool ValidarUsuarioCliente(string nombre, string password)
-            {
-                string connectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString"].ConnectionString;
-                using (SqlConnection conexion = new SqlConnection(connectionString))
-                {
-                    SqlCommand cmd = new SqlCommand("SELECT COUNT(1) FROM cliente WHERE nombre=@nombre AND contrasenia=@password", conexion);
-                    cmd.Parameters.AddWithValue("@nombre", nombre);
-                    cmd.Parameters.AddWithValue("@password", password);
+        //private bool ValidarUsuarioCliente(string nombre, string password)
+        //{
+        //    string connectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString"].ConnectionString;
+        //    using (SqlConnection conexion = new SqlConnection(connectionString))
+        //    {
+        //        SqlCommand cmd = new SqlCommand("SELECT COUNT(1) FROM cliente WHERE nombre=@nombre AND contrasenia=@password", conexion);
+        //        cmd.Parameters.AddWithValue("@nombre", nombre);
+        //        cmd.Parameters.AddWithValue("@password", password);
 
-                    conexion.Open();
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
-                    return count == 1;
-                }
-            }
+        //        conexion.Open();
+        //        int count = Convert.ToInt32(cmd.ExecuteScalar());
+        //        return count == 1;
+        //    }
+        //}
 
-            private bool ValidarUsuarioEjecutivo(string rfc, string password)
-            {
-                string connectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString"].ConnectionString;
-                using (SqlConnection conexion = new SqlConnection(connectionString))
-                {
-                    SqlCommand cmd = new SqlCommand("SELECT COUNT(1) FROM ejecutivo WHERE rfc=@rfc AND contrasenia=@password", conexion);
-                    cmd.Parameters.AddWithValue("@rfc", rfc);
-                    cmd.Parameters.AddWithValue("@password", password);
+        //private bool ValidarUsuarioEjecutivo(string rfc, string password)
+        //{
+        //    string connectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString"].ConnectionString;
+        //    using (SqlConnection conexion = new SqlConnection(connectionString))
+        //    {
+        //        SqlCommand cmd = new SqlCommand("SELECT COUNT(1) FROM ejecutivo WHERE rfc=@rfc AND contrasenia=@password", conexion);
+        //        cmd.Parameters.AddWithValue("@rfc", rfc);
+        //        cmd.Parameters.AddWithValue("@password", password);
 
-                    conexion.Open();
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
-                    return count == 1;
-                }
-            }
-            */
+        //        conexion.Open();
+        //        int count = Convert.ToInt32(cmd.ExecuteScalar());
+        //        return count == 1;
+        //    }
+        //}
+            
         }
 }
