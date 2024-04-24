@@ -32,16 +32,7 @@
                     <TextBlock>Retirar</TextBlock>
                 </StackPanel>
             </ListBoxItem>
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock>Recibir</TextBlock>
-                </StackPanel>
-            </ListBoxItem>
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock>Tienda</TextBlock>
-                </StackPanel>
-            </ListBoxItem>
+            
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock>Acerca de...</TextBlock>
