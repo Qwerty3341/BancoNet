@@ -6,11 +6,21 @@
              xmlns:local="clr-namespace:Banco.UI.Main"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <ScrollViewer x:Name="AccountScrollablePanel">
-            <StackPanel x:Name="AccountStackPanel" Orientation="Vertical" Margin="0,0,0,0">
-            </StackPanel>
-        </ScrollViewer>
-        <!--AKI VAN LOS PANELES DE LAS CUENTAS-->
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="1" Background="White">
+            <ScrollViewer x:Name="AccountScrollablePanel" VerticalScrollBarVisibility="Auto">
+                <StackPanel x:Name="AccountStackPanel" Orientation="Vertical" Margin="10">
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <Border Grid.Row="0" Background="White" Margin="10">
+            <Label Grid.Row="0" Content="Cuentas" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" ></Label>
+        </Border>
+        
+        
     </Grid>
 </UserControl>

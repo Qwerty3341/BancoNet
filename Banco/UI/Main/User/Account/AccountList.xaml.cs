@@ -1,5 +1,7 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
 using Banco.UI.Main.User.Account;
+using Banco.UI.Main.User.History;
 
 namespace Banco.UI.Main.User.Account
 {
@@ -12,9 +14,14 @@ namespace Banco.UI.Main.User.Account
         {
             InitializeComponent();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 2; i++)
             {
-                AccountStackPanel.Children.Add(new AccountDetails());
+                AccountDetails accDetails = new AccountDetails();
+                if (i > 0)
+                {
+                    accDetails.Margin = new Thickness(0, 10, 0, 0); // Margen de 5 unidades arriba
+                }
+                AccountStackPanel.Children.Add(accDetails);
             }
         }
     }
