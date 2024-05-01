@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using Banco.UI.Main.About;
 using Banco.UI.Main.User.Account;
 using Banco.UI.Main.User.History;
 using Banco.UI.Main.User.Transfer;
@@ -67,6 +68,13 @@ namespace Banco.UI.Main.User
                             // Agrega el UserControl al Grid en la segunda columna
                             Grid.SetColumn(withdrawContainer, 1);
                             contentGrid.Children.Add(withdrawContainer);
+                        }
+                        else if (textBlock.Text == "Acerca de...")
+                        {
+                            AboutPanel aboutPanel = new AboutPanel();
+
+                            Grid.SetColumn(aboutPanel, 1);
+                            contentGrid.Children.Add(aboutPanel);
                         }
                         else
                             {

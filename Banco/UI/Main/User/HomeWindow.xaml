@@ -14,28 +14,28 @@
         <ListBox SelectionChanged="ListBox_SelectionChanged">
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock>Cuentas</TextBlock>
+                    <TextBlock FontSize="16">Cuentas</TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock>Movimientos</TextBlock>
+                    <TextBlock FontSize="16">Movimientos</TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock>Transferir</TextBlock>
+                    <TextBlock FontSize="16">Transferir</TextBlock>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock>Retirar</TextBlock>
+                    <TextBlock FontSize="16">Retirar</TextBlock>
                 </StackPanel>
             </ListBoxItem>
             
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock>Acerca de...</TextBlock>
+                    <TextBlock FontSize="16">Acerca de...</TextBlock>
                 </StackPanel>
             </ListBoxItem>
         </ListBox>
