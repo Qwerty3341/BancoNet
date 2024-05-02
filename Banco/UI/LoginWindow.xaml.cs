@@ -51,6 +51,14 @@ namespace Banco.UI
         {
             string nombreUsuario = txtUsername.Text;
             string contrasenia = txtPassword.Password;
+               
+            //Creando la ventana para el admin
+            if (nombreUsuario == "admin" && contrasenia == "admin")
+            {
+                HomeWindow homeWindow = new HomeWindow();
+                homeWindow.Show();
+                this.Close();
+            }
 
             string resultado = ValidadorDeUsuarios.ValidarUsuario(nombreUsuario, contrasenia);
             switch (resultado)
@@ -58,14 +66,6 @@ namespace Banco.UI
                 case "cliente":
                     break;
                 case "ejecutivo":
-                    break;
-                case "admin":
-                    if (nombreUsuario == "admin" && contrasenia == "admin")
-                    {
-                        HomeWindow homeWindow = new HomeWindow();
-                        homeWindow.Show();
-                        this.Close();
-                    }
                     break;
                 default:
                     MessageBox.Show("ERROR: Nombre de usuario o contraseña incorrectos.");

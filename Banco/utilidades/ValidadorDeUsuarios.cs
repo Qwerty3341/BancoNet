@@ -5,16 +5,16 @@ using System.Windows;
 
 namespace Banco.Utilidades
 {
-    //Clase usada para verificar que los usuarios existan
+    // Clase usada para verificar que los usuarios existan
     internal class ValidadorDeUsuarios
     {
         public static string ValidarUsuario(string username, string password)
         {
-            if (ValidarUsuarioCliente(username, password))
+            if (ValidarCredenciales("cliente", "correo", username, password))
             {
                 return "cliente";
             }
-            else if (ValidarUsuarioEjecutivo(username, password))
+            else if (ValidarCredenciales("ejecutivo", "rfc", username, password))
             {
                 return "ejecutivo";
             }
@@ -24,36 +24,32 @@ namespace Banco.Utilidades
             }
         }
 
-        private static bool ValidarUsuarioCliente(string correo, string password)
+        private static bool ValidarCredenciales(string tabla, string columnaUsuario, string usuario, string password)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString1"].ConnectionString;
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
-                SqlCommand cmd = new SqlCommand("SELECT COUNT(1) FROM cliente WHERE correo=@correo AND contrasenia=@password", conexion);
-                conexion.Open();
-                cmd.Parameters.AddWithValue("@correo", correo);
-                cmd.Parameters.AddWithValue("@password", password);
-
-                
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-                conexion.Close();
-                return count == 1;
-            }
-        }
-
-        private static bool ValidarUsuarioEjecutivo(string rfc, string password)
-        {
-            string connectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString1"].ConnectionString;
-            using (SqlConnection conexion = new SqlConnection(connectionString))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT COUNT(1) FROM ejecutivo WHERE rfc=@rfc AND contrasenia=@password", conexion);
-                conexion.Open();
-                cmd.Parameters.AddWithValue("@rfc", rfc);
-                cmd.Parameters.AddWithValue("@password", password);
-
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-                conexion.Close ();
-                return count == 1;
+                string query = $"SELECT COUNT(1) FROM {tabla} WHERE {columnaUsuario}=@usuario AND contrasenia=@password";
+                using (SqlCommand cmd = new SqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    cmd.Parameters.AddWithValue("@password", password);
+                    try
+                    {
+                        conexion.Open();
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        return count == 1;
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Error al conectarse a la base de datos: " + ex.Message);
+                        return false;
+                    }
+                    finally
+                    {
+                        conexion.Close();
+                    }
+                }
             }
         }
     }
