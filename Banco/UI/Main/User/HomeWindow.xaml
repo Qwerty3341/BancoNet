@@ -11,34 +11,41 @@
             <ColumnDefinition Width="39*"/>
             <ColumnDefinition Width="121*"/>
         </Grid.ColumnDefinitions>
-        <ListBox SelectionChanged="ListBox_SelectionChanged">
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock>Cuentas</TextBlock>
-                </StackPanel>
-            </ListBoxItem>
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock>Movimientos</TextBlock>
-                </StackPanel>
-            </ListBoxItem>
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock>Transferir</TextBlock>
-                </StackPanel>
-            </ListBoxItem>
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock>Retirar</TextBlock>
-                </StackPanel>
-            </ListBoxItem>
-            
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock>Acerca de...</TextBlock>
-                </StackPanel>
-            </ListBoxItem>
-        </ListBox>
+        <Border  >
+            <ListBox SelectionChanged="ListBox_SelectionChanged" Background="#FFDEEDF1">
+                <ListBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/UI/Main/User/wallet.png" Height="30" Margin="10"/>
+                        <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center">Cuentas</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/UI/Main/User/clock.png" Height="30" Margin="10" />
+                        <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center">Movimientos</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/UI/Main/User/data-transfer.png" Height="30" Margin="10" />
+                        <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center">Transferir</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/UI/Main/User/money-withdrawal.png" Height="30" Margin="10" />
+                        <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center">Retirar</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/UI/Main/User/information.png" Height="30" Margin="10"/>
+                        <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center">Acerca de...</TextBlock>
+                    </StackPanel>
+                </ListBoxItem>
+            </ListBox>
+        </Border>
         <Grid Grid.Column="1" x:Name="contentGrid">
             <!-- Aquí agregaremos el UserControl -->
 

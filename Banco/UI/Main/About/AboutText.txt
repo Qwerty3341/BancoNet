@@ -1,0 +1,5 @@
+Proyecto .NET - 4ºB
+Diseño UI: Ndahai Arenas
+Logica UI: Ndahai Arenas, Aram Monsivais
+DB: Luciano Gaytan
+Backend, validaciones: Luciano Gaytan, Daniel Ortiz
