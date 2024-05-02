@@ -257,5 +257,23 @@
   <ItemGroup>
     <Resource Include="UI\Main\User\bank.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Main\User\money-withdrawal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Main\User\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Main\User\data-transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Main\User\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Main\User\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Main\User\information.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
