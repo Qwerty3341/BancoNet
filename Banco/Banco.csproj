@@ -114,16 +114,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GestionBancoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GestionBancoDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="GestionLibreriaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GestionLibreriaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="UI\Main\EmptyPanel.xaml.cs">
       <DependentUpon>EmptyPanel.xaml</DependentUpon>
     </Compile>
@@ -187,17 +177,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="GestionBancoDataSet.xsc">
-      <DependentUpon>GestionBancoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GestionBancoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GestionBancoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GestionBancoDataSet.xss">
-      <DependentUpon>GestionBancoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="GestionBancoDataSet1.xsc">
       <DependentUpon>GestionBancoDataSet1.xsd</DependentUpon>
     </None>
@@ -208,17 +187,6 @@
     </None>
     <None Include="GestionBancoDataSet1.xss">
       <DependentUpon>GestionBancoDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="GestionLibreriaDataSet.xsc">
-      <DependentUpon>GestionLibreriaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GestionLibreriaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GestionLibreriaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GestionLibreriaDataSet.xss">
-      <DependentUpon>GestionLibreriaDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

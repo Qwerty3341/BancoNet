@@ -2,8 +2,9 @@
 using Banco.UI.Main;
 using System.Configuration;
 using System.Data.SqlClient;
-using System;
+using Banco.Utilidades;
 using Banco.UI.Main.User;
+using System.Windows.Controls;
 
 namespace Banco.UI
 {
@@ -20,13 +21,15 @@ namespace Banco.UI
 
         private void ConectarALaBase()
         {
-            string conectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["Banco.Properties.Settings.GestionBancoConnectionString1"].ConnectionString;
 
-            using (SqlConnection conexion = new SqlConnection(conectionString))
+            using (SqlConnection conexion = new SqlConnection(connectionString))
             {
-                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(conectionString);
-                builder.ConnectTimeout = 1;
-                conexion.ConnectionString = builder.ConnectionString;
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(connectionString)
+                {
+                    ConnectTimeout = 30 // Tiempo de espera más largo para conexión
+                };
+
                 try
                 {
                     conexion.Open();
@@ -34,43 +37,40 @@ namespace Banco.UI
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Conexion fallida " + ex.Message);
+                    MessageBox.Show("Conexión fallida: " + ex.Message);
                 }
             }
         }
 
-        private void TextBox_TextChanged()
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            // Implementar lógica si es necesario cuando el texto cambia
         }
 
-        //Metodo temporal en lo que se implementan las validaciones
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string nombreUsuario = txtUsername.Text;
+            string contrasenia = txtPassword.Password;
 
-                HomeWindow homeWindow = new HomeWindow();
-                homeWindow.Show();
-                this.Close();
+            string resultado = ValidadorDeUsuarios.ValidarUsuario(nombreUsuario, contrasenia);
+            switch (resultado)
+            {
+                case "cliente":
+                    break;
+                case "ejecutivo":
+                    break;
+                case "admin":
+                    if (nombreUsuario == "admin" && contrasenia == "admin")
+                    {
+                        HomeWindow homeWindow = new HomeWindow();
+                        homeWindow.Show();
+                        this.Close();
+                    }
+                    break;
+                default:
+                    MessageBox.Show("ERROR: Nombre de usuario o contraseña incorrectos.");
+                    break;
+            }
         }
-        //private void button_click(object sender, routedeventargs e)
-        //{
-
-        //    //aqui se validara que el usuario exista
-
-        //    string nombreusuario = txtusername.text;
-        //    string contrasenia = txtpassword.password;
-
-        //    if (validarusuario(nombreusuario, contrasenia))
-        //    {
-        //        homewindow homewindow = new homewindow();
-        //        homewindow.show();
-        //        this.close();
-        //    }
-        //    else
-        //    {
-        //        messagebox.show("nombre o contraseña incorrectos");
-        //    }
-
-        //}
     }
 }
