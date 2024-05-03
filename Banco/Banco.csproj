@@ -64,6 +64,12 @@
     <Compile Include="UI\Main\About\AboutPanel.xaml.cs">
       <DependentUpon>AboutPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Main\Executive\CreateBankAccount.xaml.cs">
+      <DependentUpon>CreateBankAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\Executive\DeleteAccount.xaml.cs">
+      <DependentUpon>DeleteAccount.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Main\Executive\ExecutiveHome.xaml.cs">
       <DependentUpon>ExecutiveHome.xaml</DependentUpon>
     </Compile>
@@ -85,6 +91,12 @@
     <Compile Include="UI\Main\User\Transfer\TransferContainer.xaml.cs">
       <DependentUpon>TransferContainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Main\User\Transfer\TransferToContact.xaml.cs">
+      <DependentUpon>TransferToContact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\User\Transfer\TransferToOther.xaml.cs">
+      <DependentUpon>TransferToOther.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Main\User\Withdraw\WithdrawContainer.xaml.cs">
       <DependentUpon>WithdrawContainer.xaml</DependentUpon>
     </Compile>
@@ -94,6 +106,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\Main\EmptyPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Main\Executive\CreateBankAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Main\Executive\DeleteAccount.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,6 +188,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\Main\User\Transfer\TransferContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Main\User\Transfer\TransferToContact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Main\User\Transfer\TransferToOther.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
